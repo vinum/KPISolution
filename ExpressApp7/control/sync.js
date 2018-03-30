@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var cache = require('./cache');
 var chart = require('../models/home/chart');
-var io = require('socket.io').listen(80);
+var io = require('socket.io').listen(8080);
 var diff;
 var sStatus;
 var clients = {};
@@ -78,6 +78,6 @@ module.exports = function dataSync(orig_data, id) {
         console.log("DISCONNET!!!!!" + clients[socket.id]);
         delete clients[socket.id];
     });
-    setTimeout(function () { dataSync(orig_data, id); }, 1000);
+    // setTimeout(function () { dataSync(orig_data, id); }, 1000);
 };
 //# sourceMappingURL=sync.js.map

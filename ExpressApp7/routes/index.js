@@ -66,6 +66,12 @@ router.get('/home2', function (req, res) {
     var message = '';
     res.render('home2');
 });
+router.get('/api', function (req, res) {
+    res.json({ message: 'hooray! welcome to our api!' });
+});
+router.post('/api/getdata', function (req, res) {
+    console.log(req.body);
+});
 router.get('/login', function (req, res) {
     console.log("Entered GET!!!");
     res.render('login', { message: message });

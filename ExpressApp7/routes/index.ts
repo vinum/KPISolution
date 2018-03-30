@@ -99,6 +99,14 @@ router.get('/home2', (req: express.Request, res: express.Response) => {
 
 });
 
+router.get('/api', (req: express.Request, res: express.Response) => {
+    res.json({ message: 'hooray! welcome to our api!' }); 
+});
+
+router.post('/api/getdata', (req: express.Request, res: express.Response) => {
+    console.log(req.body);
+});
+
 router.get('/login', (req: express.Request, res: express.Response) => {
         
        console.log("Entered GET!!!");

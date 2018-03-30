@@ -1,7 +1,7 @@
 ﻿var cache = require('./cache');
 var chart = require('../models/home/chart');
 import index from '../routes/index';
-var io = require('socket.io').listen(80);
+var io = require('socket.io').listen(8080);
 
 interface myObj {
     //name:string;
@@ -119,7 +119,7 @@ module.exports = function dataSync(orig_data, id) {
             delete clients[socket.id];
         });
 
-        setTimeout(function () { dataSync(orig_data, id); }, 1000);
+       // setTimeout(function () { dataSync(orig_data, id); }, 1000);
 }
   
 
